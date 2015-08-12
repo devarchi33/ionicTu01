@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.controllers.messasgeController'])
+angular.module('starter.controllers', ['starter.controllers.messasgeController', 'starter.controllers.configController'])
 
     .controller('DashCtrl', function ($scope) {
     })
@@ -20,19 +20,6 @@ angular.module('starter.controllers', ['starter.controllers.messasgeController']
 
     .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
         $scope.chat = Chats.get($stateParams.chatId);
-    })
-
-    .controller('ConfigCtrl', function ($scope) {
-        $scope.settingsList = [
-            {
-                text: "Message Off/On",
-                checked: true,
-            },
-            {
-                text: "Second Toggle!!",
-                checked: false
-            }
-        ];
     })
 
     .controller('ContactCtrl', function ($scope) {
