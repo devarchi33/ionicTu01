@@ -23,9 +23,16 @@ angular.module('starter.controllers', [])
     })
 
     .controller('ConfigCtrl', function ($scope) {
-        $scope.settings = {
-            enableMessages: true
-        };
+        $scope.settingsList = [
+            {
+                text: "Message Off/On",
+                checked: true,
+            },
+            {
+                text: "Second Toggle!!",
+                checked: false
+            }
+        ];
     })
 
     .controller('ContactCtrl', function ($scope) {
