@@ -8,7 +8,7 @@
 
                         <h2>{{ messageSection.messageCount }}</h2>
 
-                        <p>{{ messageSection.date }}</p>
+                        <p>{{ messageSection.date | date }}</p>
                     </div>
                     <div class="item item-body">
                         <img ng-src="{{ messageSection.companyImg }}" alt="company image"/>
