@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
     .controller('MessageCtrl', function ($scope, $ionicSlideBoxDelegate) {
         $scope.message1 = "message1!!";
         $scope.message2 = "message2!!";
-        $scope.messgeSections = [
+        $scope.messageSections = [
             {
                 messageCount: 1,
                 date: new Date(),
