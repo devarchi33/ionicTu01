@@ -22,6 +22,13 @@ angular.module('starter.controllers.messasgeController', [])
                 alertMessage: "Dummy Message2 Dummy Message2 Dummy Message2 Dummy Message2 Dummy Message2 Dummy Message2 Dummy Message2",
                 profileImg: "img/mcfly.jpg",
                 companyImg: "img/delorean.jpg"
+            },
+            {
+                messageCount: 3,
+                date: new Date(),
+                alertMessage: "Dummy Message3 Dummy Message3 Dummy Message3 Dummy Message3 Dummy Message3 Dummy Message3 Dummy Message3",
+                profileImg: "img/mcfly.jpg",
+                companyImg: "img/delorean.jpg"
             }
         ];
 
