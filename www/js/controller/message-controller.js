@@ -4,9 +4,10 @@
 
 angular.module('starter.controllers.messasgeController', [])
 
-    .controller('MessageCtrl', function ($scope, $ionicSlideBoxDelegate) {
+    .controller('MessageCtrl', function ($scope, $http, $ionicSlideBoxDelegate) {
         $scope.message1 = "message1!!";
         $scope.message2 = "message2!!";
+
         $scope.messageSections = [
             {
                 messageCount: 1,
@@ -23,4 +24,11 @@ angular.module('starter.controllers.messasgeController', [])
                 companyImg: "img/delorean.jpg"
             }
         ];
+
+        $http.get('http://echo.jsontest.com/conditions/frightful').then(function (resp) {
+            $scope.conditions = resp.data.conditions;
+        }, function (err) {
+            console.error('ERR', err);
+            // err.status will contain the status code
+        })
     });
