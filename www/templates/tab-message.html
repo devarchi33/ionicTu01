@@ -1,32 +1,25 @@
 <ion-view title="Message">
     <ion-content class="padding">
         <ion-slide-box on-slide-changed="slideHasChanged($index)">
-            <ion-slide>
+            <ion-slide ng-repeat="messageSection in messageSections">
                 <div class="list card">
-
                     <div class="item item-avatar">
-                        <img src="img/mcfly.jpg">
+                        <img ng-src="{{ messageSection.profileImg }}" alt="profile image"/>
 
-                        <h2>{{ message1 }}</h2>
+                        <h2>{{ messageSection.messageCount }}</h2>
 
-                        <p>November 05, 2015</p>
+                        <p>{{ messageSection.date }}</p>
                     </div>
-
                     <div class="item item-body">
-                        <img class="full-image" src="img/delorean.jpg">
+                        <img ng-src="{{ messageSection.companyImg }}" alt="company image"/>
 
-                        <p>
-                            This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                            the content is from a card-body consisting of an image and paragraph text. The footer
-                            consists of tabs, icons aligned left, within the card-footer.
-                        </p>
+                        <p>{{ messageSection.alertMessage }}</p>
 
                         <p>
                             <a href="#" class="subdued">1 Like</a>
                             <a href="#" class="subdued">5 Comments</a>
                         </p>
                     </div>
-
                     <div class="item tabs tabs-secondary tabs-icon-left">
                         <a class="tab-item" href="#">
                             <i class="icon ion-ios-checkmark"></i>
@@ -41,50 +34,6 @@
                         <!--Share-->
                         <!--</a>-->
                     </div>
-
-                </div>
-            </ion-slide>
-            <ion-slide>
-                <div class="list card">
-
-                    <div class="item item-avatar">
-                        <img src="img/mcfly.jpg">
-
-                        <h2>{{ message2 }}</h2>
-
-                        <p>November 06, 2015</p>
-                    </div>
-
-                    <div class="item item-body">
-                        <img class="full-image" src="img/delorean.jpg">
-
-                        <p>
-                            This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                            the content is from a card-body consisting of an image and paragraph text. The footer
-                            consists of tabs, icons aligned left, within the card-footer.
-                        </p>
-
-                        <p>
-                            <a href="#" class="subdued">1 Like</a>
-                            <a href="#" class="subdued">5 Comments</a>
-                        </p>
-                    </div>
-
-                    <div class="item tabs tabs-secondary tabs-icon-left">
-                        <a class="tab-item" href="#">
-                            <i class="icon ion-ios-checkmark"></i>
-                            Check
-                        </a>
-                        <a class="tab-item" href="#">
-                            <i class="icon ion-close-circled"></i>
-                            Close
-                        </a>
-                        <!--<a class="tab-item" href="#">-->
-                        <!--<i class="icon ion-share"></i>-->
-                        <!--Share-->
-                        <!--</a>-->
-                    </div>
-
                 </div>
             </ion-slide>
         </ion-slide-box>
