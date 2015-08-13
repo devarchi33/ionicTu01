@@ -4,6 +4,6 @@
 
 angular.module('starter.services.messageService', [])
 
-    .factory('Messsage', ['$scope', '$http', function ($scope, $http) {
+    .factory('Message', ['$scope', '$http', function ($scope, $http) {
 
     }]);

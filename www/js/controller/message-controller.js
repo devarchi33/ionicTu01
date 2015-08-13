@@ -2,7 +2,7 @@
  * Created by donghoon on 15. 8. 12..
  */
 
-angular.module('starter.controllers.messasgeController', [])
+angular.module('starter.controllers.messageController', [])
 
     .controller('MessageCtrl', function ($scope, $http, $ionicSlideBoxDelegate) {
         $scope.message1 = "message1!!";
@@ -32,8 +32,8 @@ angular.module('starter.controllers.messasgeController', [])
             }
         ];
 
-        $http.get('http://echo.jsontest.com/conditions/frightful').then(function (resp) {
-            $scope.conditions = resp.data.conditions;
+        $http.get('http://cors-test.appspot.com/test').then(function (resp) {
+            $scope.conditions = resp.data.status;
         }, function (err) {
             console.error('ERR', err);
             // err.status will contain the status code
