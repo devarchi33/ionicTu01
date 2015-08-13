@@ -4,7 +4,7 @@
 
 angular.module('starter.controllers.messageController', [])
 
-    .controller('MessageCtrl', function ($scope, $http, $ionicSlideBoxDelegate) {
+    .controller('MessageCtrl', ['$scope', '$http', 'Message', function ($scope, $http, Message, $ionicSlideBoxDelegate) {
         $scope.message1 = "message1!!";
         $scope.message2 = "message2!!";
 
@@ -32,10 +32,12 @@ angular.module('starter.controllers.messageController', [])
             }
         ];
 
-        $http.get('http://cors-test.appspot.com/test').then(function (resp) {
-            $scope.conditions = resp.data.status;
-        }, function (err) {
-            console.error('ERR', err);
-            // err.status will contain the status code
-        })
-    });
+        Message.getStatus.success(function (data) {
+            $scope.conditions = data.status;
+        });
+
+        Message.getForecast.success(function (data) {
+            console.log("forecast : " + data);
+            $scope.fiveDay = data;
+        });
+    }]);

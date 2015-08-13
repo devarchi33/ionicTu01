@@ -13,13 +13,28 @@
                     <div class="item item-body">
                         <img ng-src="{{ messageSection.companyImg }}" alt="company image"/>
 
-                        <p>{{ messageSection.alertMessage }}</p>
+                        <!--<p>{{ messageSection.alertMessage }}</p>-->
+
                         <p>The weather outside is {{ conditions }}</p>
 
-                        <p>
-                            <a href="#" class="subdued">1 Like</a>
-                            <a href="#" class="subdued">5 Comments</a>
-                        </p>
+                        <div ng-repeat="day in fiveDay.days">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p>{{ day.datetime | date }}&nbsp;&nbsp;</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p>{{ day.high }}&deg;&nbsp;&nbsp;</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p>{{ day.low }}&deg;&nbsp;&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<p>-->
+                            <!--<a href="#" class="subdued">1 Like</a>-->
+                            <!--<a href="#" class="subdued">5 Comments</a>-->
+                        <!--</p>-->
                     </div>
                     <div class="item tabs tabs-secondary tabs-icon-left">
                         <a class="tab-item" href="#">
