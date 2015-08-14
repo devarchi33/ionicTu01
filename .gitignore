@@ -3,3 +3,4 @@ platforms/
 plugins/
 .idea
 dummy.js
+www/lib/*
