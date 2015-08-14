@@ -1,4 +1,5 @@
-angular.module('starter.controllers', ['starter.controllers.messageController', 'starter.controllers.configController', 'starter.controllers.chatController'])
+angular.module('starter.controllers',
+    ['starter.controllers.messageController', 'starter.controllers.configController', 'starter.controllers.chatController', 'starter.controllers.contactController'])
 
     .controller('DashCtrl', function ($scope, $cordovaActionSheet) {
 
@@ -17,9 +18,5 @@ angular.module('starter.controllers', ['starter.controllers.messageController', 
                     var index = btnIndex;
                 });
         }, false);
-    })
-
-    .controller('ContactCtrl', function ($scope) {
-        $scope.name = "skyfly33";
     })
 ;
