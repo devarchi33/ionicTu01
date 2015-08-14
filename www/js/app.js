@@ -155,7 +155,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                 }
             })
 
-            .state('tab.messasge', {
+            .state('tab.message', {
                 url: '/message',
                 views: {
                     'tab-message': {
