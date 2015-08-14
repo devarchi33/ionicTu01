@@ -164,6 +164,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                     }
                 }
             })
+
+            .state('tab.plugin', {
+                url: '/plugin',
+                views: {
+                    'tab-plugin': {
+                        templateUrl: 'templates/tab-plugin.html',
+                        controller: 'PluginCtrl'
+                    }
+                }
+            })
         ;
 
         // if none of the above states are matched, use this as the fallback
