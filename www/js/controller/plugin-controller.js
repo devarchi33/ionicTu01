@@ -5,7 +5,7 @@
 angular.module('starter.controllers.pluginController', [])
 
     .controller('PluginCtrl', ['$scope', '$ionicActionSheet', '$cordovaPush', '$cordovaDialogs', '$cordovaMedia', '$cordovaToast', 'Push', '$http',
-        function ($scope, $ionicActionSheet, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast, ionPlatform, $http) {
+        function ($scope, $ionicActionSheet, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast, Push, $http) {
             $scope.pluginWord = "Push!";
 
             $scope.showActionSheet = function () {
