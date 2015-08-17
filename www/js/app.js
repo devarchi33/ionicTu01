@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova'])
 
-    .run(function ($ionicPlatform, $cordovaPush, $cordovaActionSheet) {
+    .run(function ($ionicPlatform, $cordovaPush) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
@@ -39,10 +39,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
                     // Success
                     console.log("Register Success Result : " + result);
                     alert("Register Success Result : " + result);
-                    $cordovaActionSheet.show(options)
-                        .then(function (btnIndex) {
-                            var index = btnIndex;
-                        });
                 }, function (err) {
                     // Error
                     console.log("Register Error Result : " + err);
