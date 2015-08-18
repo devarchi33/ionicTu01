@@ -3,8 +3,37 @@
 -->
 
 <ion-view title="Plugin">
-    <ion-content class="padding">
-        <h1>{{ pluginWord }}</h1>
-        <button class="button icon-right ion-chevron-right button-calm" ng-click="showActionSheet()">Action Sheet</button>
+    <ion-content class="padding" padding="true">
+        <h3>{{ pluginWord }}</h3>
+
+        <div class="text-center padding">
+            <ion-list>
+                <ion-item>
+                    <button class="button icon-right ion-chevron-right button-calm" ng-click="showActionSheet()">Action
+                        Sheet
+                    </button>
+                </ion-item>
+                <ion-item>
+                    <button ng-disabled="registerDisabled" class="button button-bar-inline button-balanced"
+                            ng-click="register()">Register
+                    </button>
+                </ion-item>
+                <ion-item>
+                    <button ng-disabled="!registerDisabled" class="button button-bar-inline button-balanced"
+                            ng-click="unregister()">Unregister
+                    </button>
+                </ion-item>
+            </ion-list>
+        </div>
+        <br/>
+
+        <p>Device Token</p>
+        <textarea readonly style="width: 410px; height: 200px;">{{ regId }}</textarea>
+
+        <ion-list>
+            <ion-item ng-repeat="notification in notifications track by $index" type="item-content">
+                {{ notification }}
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

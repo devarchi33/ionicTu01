@@ -5,6 +5,13 @@
 angular.module('starter.services.pushService', [])
 
     .factory('Push', function ($q) {
+        var ready = $q.defer();
 
-        return {};
+        ionic.Platform.ready(function (device) {
+            ready.resolve(device);
+        });
+
+        return {
+            ready: ready.promise
+        };
     });
